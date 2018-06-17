@@ -13,10 +13,51 @@ $(document).ready(function() {
 
   var database = firebase.database();
 
+  var searchTerm = "";
 
-  database.ref().push({
-     // first part is child of database. after : is the value.
+  $("#add-search").on("click", function(event) {
+    // Don't refresh the page!
+    event.preventDefault();
+
+    
+    searchTerm = $("#search-input").val().trim();
+    // not sure what the id is yet but just a placeholder for now.
+    
+
+    database.ref().push({
+        
+      searchTerm: searchTerm,
+       // can create additional fields as needed.
+        
+    });
+
+    console.log(searchTerm);
+    
+
   });
+
+  database.ref().limitToLast(5).on("child_added", function(snapshot) { 
+    // limit to last limits the display to 5 results.
+
+    var newRow = $("<tr>");
+
+    // Add database data to table data elements
+    var newSearch = $("<td>").text(snapshot.val().searchTerm);
+    
+    
+
+    // Add table data elements with database info to the table row
+    newRow.prepend(newSearch);
+
+    // Add the filled table row to the table
+    $("#search-data").prepend(newRow); // again not sure what the id will be but a placeholder.
+  
+ 
+});
+
+
+  
+  
 
 
 }); // end of document.ready
