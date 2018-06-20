@@ -23,58 +23,15 @@ $(document).ready(function() {
     // Don't refresh the page!
     event.preventDefault();
     
-    
+
     searchTerm = $("#search-input").val().trim();
     name = $("#name-input").val().trim();
     email = $("#email-input").val().trim();
     slack = $("#slack-input").val().trim();
-    // not sure what the id is yet but just a placeholder for now.
 
-    // if (searchTerm != "" ) { // input validation.
-    //   $("#alert").text(alert); //not working need to work on.
-    //   two = setTimeout(function twoSeconds(){
-    //     $("#alert").empty();
-    //   }, 2000);
-      
-    // }
-    
-    //   if (name != "" ) { // input validation.
-    //     $("#alert").text(alert); //not working need to work on.
-    //     two = setTimeout(function twoSeconds(){
-    //       $("#alert").empty();
-    //     }, 2000);
-    //     }
-    //     if (email != "" ) { // input validation.
-    //       $("#alert").text(alert); //not working need to work on.
-    //       two = setTimeout(function twoSeconds(){
-    //         $("#alert").empty();
-    //       }, 2000);
-    //       }
-    //       if (slack != "" ) { // input validation.
-    //         $("#alert").text(alert); //not working need to work on.
-    //         two = setTimeout(function twoSeconds(){
-    //           $("#alert").empty();
-    //         }, 2000);
-    //         }
-    
+    validate();
 
-    database.ref().push({
-        
-      searchTerm: searchTerm,
-      slack: slack,
-      name: name,
-      email: email,
-       // can create additional fields as needed.
 
-        
-    });
-
-    console.log(searchTerm);
-    console.log(slack);
-    console.log(name);
-    console.log(email);
-    database.ref().limitToLast(5);
-    
   });
 
   database.ref().limitToLast(5).on("child_added", function(snapshot) { 
@@ -100,8 +57,65 @@ $(document).ready(function() {
 });
 
 
+function validate() {
   
-  
+
+  // Get the value of the input field with id="numb"
+  searchTerm = $("#search-input").val().trim();
+  name = $("#name-input").val().trim();
+  email = $("#email-input").val().trim();
+  slack = $("#slack-input").val().trim();
+
+  if (((typeof searchTerm != "undefined") &&
+     (typeof searchTerm.valueOf() == "string")) &&
+    (searchTerm.length > 0) && (typeof name != "undefined") &&
+    (typeof name.valueOf() == "string") &&
+   (name.length > 0) && (typeof email != "undefined") &&
+   (typeof email.valueOf() == "string") &&
+  (email.length > 0) && (typeof slack != "undefined") &&
+  (typeof slack.valueOf() == "string") &&
+ (slack.length > 0)) {
+      pushData();
+
+  } else {
+    text = "Not valid input.";
+    $("#alert").append(text);
+    two = setTimeout(function twoSeconds(){
+      $("#alert").empty();
+    }, 2000);
+      
+  }
+
+
+}
+
+function pushData() {
+
+  searchTerm = $("#search-input").val().trim();
+  name = $("#name-input").val().trim();
+  email = $("#email-input").val().trim();
+  slack = $("#slack-input").val().trim();
+
+
+  database.ref().push({
+        
+    searchTerm: searchTerm,
+    slack: slack,
+    name: name,
+    email: email,
+     // can create additional fields as needed.
+
+      
+  });
+
+  console.log(searchTerm);
+  console.log(slack);
+  console.log(name);
+  console.log(email);
+
+}
+
+
 
 
 });// end of document.ready
