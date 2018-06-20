@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <!--custom style sheet-->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<<<<<<< HEAD
     <!--js link-->
     <link rel="stylesheet" type="text/css" href="assets/javascript/project.js">
     <!--firebase link-->
@@ -19,6 +20,19 @@
     <script src="https://code.jquery.com/jquery.js"></script>
 
 
+=======
+
+    
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+    
+    
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+
+    <script src="assets/javascript/project.js"></script>
+>>>>>>> 04a86bc4afb76a0bfd58814c74e0cab7731c72e9
 
 </head>
 
@@ -55,7 +69,7 @@
                             </div>
                             <div class="form-group row">
                                 <label for="slack-input">Slack ID:</label>
-                                <input class="form-control" id="slack-input" type="number">
+                                <input class="form-control" id="slack-input" type="text">
                             </div>
 
                             <div class="form-group row">
@@ -83,11 +97,31 @@
                 </table>
                 <!-- End of Table -->
 
+<<<<<<< HEAD
+=======
+
+            <div class="col-lg-6" "col-sm-12" style="margin-top: 10px;">
+                <div class="card card-default">
+                    <div class="card-body">
+                        <div class="form-group row">
+                            <label for="search-input">Search Input:</label>
+                            <input class="form-control" id="search-input" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                        <div class="col-12">
+                            <h3 id = "alert"></h3>
+                          </div>
+                    </div>
+>>>>>>> 04a86bc4afb76a0bfd58814c74e0cab7731c72e9
             </div>
         </div>
 
 
+        </div>
 
+<<<<<<< HEAD
 
 
 
@@ -96,40 +130,34 @@
 
 
     </div>
+=======
+        <div class="row">
+            <div class="col-6">
+                <!-- Current Employees Table -->
+                <table class="table table-bordered table-hover">
+                  <!-- thead-light does not appear to be working -->
+                  <thead class="thead-light">
+                    <tr>
+                      <th scope="col">Trending Searches</th>
+                      
+                      
+                    </tr>
+                  </thead>
+                  <tbody id="trending">
+                    <!-- Rows will go here. Eventually. -->
+                  </tbody>
+                </table>
+                <!-- End of Table -->
+              </div>
+        </div>
+>>>>>>> 04a86bc4afb76a0bfd58814c74e0cab7731c72e9
 
     </div>
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery.js"></script>
+    
 
-    <!-- Script -->
-    <script>
-        // Capture Button Click
-        $("#add-user").on("click", function (event) {
-            // prevent form from trying to submit/refresh the page
-            event.preventDefault();
-
-            // Capture User Inputs and store them into variables
-            var name = $("#name-input").val().trim();
-            var email = $("#email-input").val().trim();
-            var slack = $("#slack-input").val().trim();
-            var search = $("#search-input").val().trim();
-
-            // Console log each of the user inputs to confirm we are receiving them
-            console.log(name);
-            console.log(email);
-            console.log(slack);
-            console.log(search);
-
-            // Output all of the new information into the relevant HTML sections
-            $("#name-display").text(name);
-            $("#email-display").text(email);
-            $("#age-display").text(slack);
-            $("#comment-display").text(search);
-
-        });
-    </script>
 
 </body>
 
 </html>
+
