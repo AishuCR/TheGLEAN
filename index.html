@@ -1,1 +1,115 @@
+<!DOCTYPE html>
 
+<html lang="en-us">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Sign-Up Today!</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    
+    
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <br>
+
+        <!-- Jumbotron -->
+        <div class="jumbotron" id="title">
+            <h1 class="text-center">Global Events Tracker</h1>
+        </div>
+
+        <div class="row">
+
+            <!-- Sign-Up details-->
+            <div class="col-lg-6">
+                <div class="card card-default">
+                    <div class="card-heading">
+                        <h3 class="card-title">Sign-Up Details</h3>
+                    </div>
+                    <div class="card-body">
+
+                        <!-- Sign-up Form (note the various input "types")-->
+                        <form role="form">
+                            <div class="form-group row">
+                                <label for="name-input">Name:</label>
+                                <input class="form-control" id="name-input" type="text">
+                            </div>
+                            <div class="form-group row">
+                                <label for="email-input">Email:</label>
+                                <input class="form-control" id="email-input" type="email">
+                            </div>
+                            <div class="form-group row">
+                                <label for="slack-input">Slack ID:</label>
+                                <input class="form-control" id="slack-input" type="number">
+                            </div>
+
+                            <button  class="btn btn-primary" type="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-6" "col-sm-12" style="margin-top: 10px;">
+                <div class="card card-default">
+                    <div class="card-body">
+                        <div class="form-group row">
+                            <label for="search-input">Search Input:</label>
+                            <input class="form-control" id="search-input" type="text">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+    <!-- Script -->
+    <script>
+        // Capture Button Click
+        $("#add-user").on("click", function (event) {
+            // prevent form from trying to submit/refresh the page
+            event.preventDefault();
+
+            // Capture User Inputs and store them into variables
+            var name = $("#name-input").val().trim();
+            var email = $("#email-input").val().trim();
+            var slack = $("#slack-input").val().trim();
+            var search = $("#search-input").val().trim();
+
+            // Console log each of the user inputs to confirm we are receiving them
+            console.log(name);
+            console.log(email);
+            console.log(slack);
+            console.log(search);
+
+            // Output all of the new information into the relevant HTML sections
+            $("#name-display").text(name);
+            $("#email-display").text(email);
+            $("#age-display").text(slack);
+            $("#comment-display").text(search);
+
+        });
+    </script>
+
+</body>
+
+</html>
