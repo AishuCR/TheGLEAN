@@ -17,6 +17,7 @@ $(document).ready(function() {
   var slack = "";
   var email = "";
   var name = "";
+  var alert = "Not valid input!";
 
   $("#search-data").on("click", function(event) {
     // Don't refresh the page!
@@ -29,10 +30,32 @@ $(document).ready(function() {
     slack = $("#slack-input").val().trim();
     // not sure what the id is yet but just a placeholder for now.
 
-    if (input != "") { // input validation.
-      $("#alert").text("Not valid info!"); //not working need to work on.
+    if (searchTerm != "" ) { // input validation.
+      $("#alert").text(alert); //not working need to work on.
+      two = setTimeout(function twoSeconds(){
+        $("#alert").empty();
+      }, 2000);
       
       }
+    
+      if (name != "" ) { // input validation.
+        $("#alert").text(alert); //not working need to work on.
+        two = setTimeout(function twoSeconds(){
+          $("#alert").empty();
+        }, 2000);
+        }
+        if (email != "" ) { // input validation.
+          $("#alert").text(alert); //not working need to work on.
+          two = setTimeout(function twoSeconds(){
+            $("#alert").empty();
+          }, 2000);
+          }
+          if (slack != "" ) { // input validation.
+            $("#alert").text(alert); //not working need to work on.
+            two = setTimeout(function twoSeconds(){
+              $("#alert").empty();
+            }, 2000);
+            }
     
 
     database.ref().push({
