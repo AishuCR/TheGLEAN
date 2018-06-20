@@ -14,24 +14,28 @@ $(document).ready(function() {
   var database = firebase.database();
 
   var searchTerm = "";
+  var slack = "";
 
-  $("#add-search").on("click", function(event) {
+  $("#submit-info").on("click", function(event) {
     // Don't refresh the page!
     event.preventDefault();
 
     
-    searchTerm = $("#search-input").val().trim();
+    searchTerm = $("#search-name").val().trim();
+    slack = $("#slack-id").val().trim();
     // not sure what the id is yet but just a placeholder for now.
     
 
     database.ref().push({
         
       searchTerm: searchTerm,
+      slack: slack,
        // can create additional fields as needed.
         
     });
 
     console.log(searchTerm);
+    console.log(slack);
     
 
   });
@@ -43,11 +47,12 @@ $(document).ready(function() {
 
     // Add database data to table data elements
     var newSearch = $("<td>").text(snapshot.val().searchTerm);
+    var newSlack = $("<td>").text(snapshot.val().slack);
     
     
 
     // Add table data elements with database info to the table row
-    newRow.prepend(newSearch);
+    newRow.prepend(newSearch, newSlack);
 
     // Add the filled table row to the table
     $("#search-data").prepend(newRow); // again not sure what the id will be but a placeholder.
