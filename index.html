@@ -9,18 +9,19 @@
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
     
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery.js"></script>
 
-    
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
     
     <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
 
     <script src="assets/javascript/project.js"></script>
+
+    <iframe src="https://api.gdeltproject.org/api/v2/doc/doc?query=%22donald%20trump%22&mode=tonechart"></iframe>
 
 </head>
 
@@ -79,15 +80,23 @@
                 <div class="row">
                         <div class="col-12">
                             <h3 id = "alert"></h3>
-                          </div>
-                    </div>
+                        </div>
+                </div>
+
+                <div class="row">
+                        <div class="col-12">
+                            <div id = "results-display"></div>
+                        </div>
+                </div>
+
             </div>
 
 
         </div>
-
+        <br>
+        <div id="wrapper">
         <div class="row">
-            <div class="col-6">
+            <div class="col">
                 <!-- Current Employees Table -->
                 <table class="table table-bordered table-hover">
                   <!-- thead-light does not appear to be working -->
@@ -98,19 +107,23 @@
                       
                     </tr>
                   </thead>
-                  <tbody id="trending">
+                    
+                        <tbody id="trending">
                     <!-- Rows will go here. Eventually. -->
-                  </tbody>
+                        </tbody>
+                   
                 </table>
                 <!-- End of Table -->
               </div>
         </div>
 
     </div>
+</div> <!--end of wrapper-->
 
     
-
-
+    
+</script>
+    
 </body>
 
 </html>

@@ -22,7 +22,7 @@ $(document).ready(function() {
   $("#search-data").on("click", function(event) {
     // Don't refresh the page!
     event.preventDefault();
-
+    
     
     searchTerm = $("#search-input").val().trim();
     name = $("#name-input").val().trim();
@@ -30,32 +30,32 @@ $(document).ready(function() {
     slack = $("#slack-input").val().trim();
     // not sure what the id is yet but just a placeholder for now.
 
-    if (searchTerm != "" ) { // input validation.
-      $("#alert").text(alert); //not working need to work on.
-      two = setTimeout(function twoSeconds(){
-        $("#alert").empty();
-      }, 2000);
+    // if (searchTerm != "" ) { // input validation.
+    //   $("#alert").text(alert); //not working need to work on.
+    //   two = setTimeout(function twoSeconds(){
+    //     $("#alert").empty();
+    //   }, 2000);
       
-      }
+    // }
     
-      if (name != "" ) { // input validation.
-        $("#alert").text(alert); //not working need to work on.
-        two = setTimeout(function twoSeconds(){
-          $("#alert").empty();
-        }, 2000);
-        }
-        if (email != "" ) { // input validation.
-          $("#alert").text(alert); //not working need to work on.
-          two = setTimeout(function twoSeconds(){
-            $("#alert").empty();
-          }, 2000);
-          }
-          if (slack != "" ) { // input validation.
-            $("#alert").text(alert); //not working need to work on.
-            two = setTimeout(function twoSeconds(){
-              $("#alert").empty();
-            }, 2000);
-            }
+    //   if (name != "" ) { // input validation.
+    //     $("#alert").text(alert); //not working need to work on.
+    //     two = setTimeout(function twoSeconds(){
+    //       $("#alert").empty();
+    //     }, 2000);
+    //     }
+    //     if (email != "" ) { // input validation.
+    //       $("#alert").text(alert); //not working need to work on.
+    //       two = setTimeout(function twoSeconds(){
+    //         $("#alert").empty();
+    //       }, 2000);
+    //       }
+    //       if (slack != "" ) { // input validation.
+    //         $("#alert").text(alert); //not working need to work on.
+    //         two = setTimeout(function twoSeconds(){
+    //           $("#alert").empty();
+    //         }, 2000);
+    //         }
     
 
     database.ref().push({
@@ -65,6 +65,7 @@ $(document).ready(function() {
       name: name,
       email: email,
        // can create additional fields as needed.
+
         
     });
 
@@ -72,13 +73,13 @@ $(document).ready(function() {
     console.log(slack);
     console.log(name);
     console.log(email);
-    $("tr").last().empty();
+    database.ref().limitToLast(5);
     
   });
 
   database.ref().limitToLast(5).on("child_added", function(snapshot) { 
     // limit to last limits the display to 5 results.
-    
+    event.preventDefault();
     var newRow = $("<tr>");
 
     // Add database data to table data elements
@@ -92,6 +93,8 @@ $(document).ready(function() {
 
     // Add the filled table row to the table
     $("#trending").prepend(newRow); // again not sure what the id will be but a placeholder.
+    
+    
   
  
 });
@@ -101,5 +104,5 @@ $(document).ready(function() {
   
 
 
-}); // end of document.ready
+});// end of document.ready
 
