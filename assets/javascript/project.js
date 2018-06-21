@@ -72,7 +72,7 @@ $(document).ready(function () {
       //now if you fix the email it still reports invalid. if you start with an invalid and fix it still shows invalid so the div usn't refreshing.
     }
     else {
-      $("#alert").text("Valid info :D");
+      $("#alert").text("Valid info :D"); //ok this fixes the above issue
     }
     
 
