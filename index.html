@@ -1,1 +1,122 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Sign-Up Today!</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+    
+    
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+
+    <script src="assets/javascript/project.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <br>
+
+        <!-- Jumbotron -->
+        <div class="jumbotron" id="title">
+            <h1 class="text-center">Global Events Tracker</h1>
+        </div>
+
+        <div class="row">
+
+            <!-- Sign-Up details-->
+            <div class="col-lg-6">
+                <div class="card card-default">
+                    <div class="card-heading">
+                        <h3 class="card-title">Sign-Up Details</h3>
+                    </div>
+                    <div class="card-body">
+
+                        <!-- Sign-up Form (note the various input "types")-->
+                        <form role="form">
+                            <div class="form-group row">
+                                <label for="name-input">Name:</label>
+                                <input class="form-control" id="name-input" type="text">
+                            </div>
+                            <div class="form-group row">
+                                <label for="email-input">Email:</label>
+                                <input class="form-control" id="email-input" type="email">
+                            </div>
+                            <div class="form-group row">
+                                <label for="slack-input">Slack ID:</label>
+                                <input class="form-control" id="slack-input" type="text">
+                            </div>
+
+                            <button  class="btn btn-primary" id="search-data" type="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-6" "col-sm-12" style="margin-top: 10px;">
+                <div class="card card-default">
+                    <div class="card-body">
+                        <div class="form-group row">
+                            <label for="search-input">Search Input:</label>
+                            <input class="form-control" id="search-input" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                        <div class="col-12">
+                            <h3 id = "alert"></h3>
+                          </div>
+                    </div>
+            </div>
+
+
+        </div>
+<!-- Need to Limit to 10 and fix frame
+Then pull simplified list to results div -->
+        <iframe src="https://api.gdeltproject.org/api/v2/doc/doc?query=%22Trump%20President%22 sourcelang:english sourcecountry:US&mode=Artlist&TIMELINESMOOTH&TIMESPAN=1d=5&Sort=DateDesc&Maxrecords=10&FORMAT=html" scrolling="yes" width=85% height=500 frameborder="5" class="respviz"></iframe>
+<!-- JSON FORMAT -->
+        <!-- https://api.gdeltproject.org/api/v2/doc/doc?query=%22Trump%20President%22%20sourcelang:english%20sourcecountry:US&mode=ArtList&TimelineVolInfo&TIMELINESMOOTH&TIMESPAN=1440=5&FORMAT=JSON -->
+
+        <div class="row">
+            <div class="col-6">
+                <!-- Current Employees Table -->
+                <table class="table table-bordered table-hover">
+                  <!-- thead-light does not appear to be working -->
+                  <thead class="thead-light">
+                    <tr>
+                      <th scope="col">Trending Searches</th>
+                      
+                      
+                    </tr>
+                  </thead>
+                  <tbody id="trending">
+                    <!-- Rows will go here. Eventually. -->
+                  </tbody>
+                </table>
+                <!-- End of Table -->
+              </div>
+        </div>
+
+    </div>
+
+    
+
+
+</body>
+
+</html>
 
