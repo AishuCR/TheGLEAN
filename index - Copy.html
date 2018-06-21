@@ -34,16 +34,15 @@
             </div>
         </div>
 
-
-        <div class="row">
+        <div class="grid-x grid-padding-x">
 
             <!-- Sign-Up details-->
-            <div class="col-lg-6">
-                <div class="card card-default">
-                    <div class="card-heading">
-                        <h3 class="card-title">Sign-Up Details</h3>
+            <div class="large-6 medium-6 cell">
+                <div class="card">
+                    <div class="card-divider">
+                        <h3>Sign-Up Details</h3>
                     </div>
-                    <div class="card-body">
+                    <div class="card-section">
 
                         <!-- Sign-up Form (note the various input "types")-->
                         <form role="form">
@@ -59,17 +58,18 @@
                                 <label for="slack-input">Slack ID:</label>
                                 <input class="form-control" id="slack-input" type="text">
                             </div>
-
-                            <button class="btn btn-primary" id="search-data" type="submit">Submit</button>
+                            <p>
+                                <button class="button expanded primary" id="search-data" type="submit">Submit</button>
+                            </p>
                         </form>
                     </div>
                 </div>
             </div>
 
 
-            <div class="col-lg-6" "col-sm-12" style="margin-top: 10px;">
-                <div class="card card-default">
-                    <div class="card-body">
+            <div class="large-6 medium-6 cell">
+                <div class="card">
+                    <div class="card-section">
                         <div class="form-group row">
                             <label for="search-input">Search Input:</label>
                             <input class="form-control" id="search-input" type="text">
@@ -86,14 +86,15 @@
 
         </div>
 
-        <div class="row">
-            <div class="col-6">
-                <!-- Current Employees Table -->
-                <table class="table table-bordered table-hover">
+        <div class="grid-x grid-padding-x">
+            <div class="large-6 medium-6 cell">
+                <!-- Recent searches -->
+                <table class="table table-bordered hover unstriped">
                     <!-- thead-light does not appear to be working -->
-                    <thead class="thead-light">
+                    <thead>
                         <tr>
-                            <th scope="col">Trending Searches</th>
+                            <th>Trending Searches</th>
+                            <th></th>                    
 
 
                         </tr>
