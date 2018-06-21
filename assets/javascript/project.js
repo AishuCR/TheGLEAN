@@ -30,32 +30,34 @@ $(document).ready(function () {
     slack = $("#slack-input").val().trim();
     // not sure what the id is yet but just a placeholder for now.
 
-    // if (searchTerm != "" ) { // input validation.
-    //   $("#alert").text(alert); //not working need to work on.
-    //   two = setTimeout(function twoSeconds(){
-    //     $("#alert").empty();
-    //   }, 2000);
 
-    //   }
+    //THis needs work yet - could do 1 loop that checks all fields for blank also
+    if (searchTerm != "" ) { // input validation.
+      $("#alert").text("Search cannot be blank"); //not working need to work on.
+      two = setTimeout(function twoSeconds(){
+        $("#alert").empty();
+      }, 2000);
 
-    //   if (name != "" ) { // input validation.
-    //     $("#alert").text(alert); //not working need to work on.
-    //     two = setTimeout(function twoSeconds(){
-    //       $("#alert").empty();
-    //     }, 2000);
-    //     }
-    //     if (email != "" ) { // input validation.
-    //       $("#alert").text(alert); //not working need to work on.
-    //       two = setTimeout(function twoSeconds(){
-    //         $("#alert").empty();
-    //       }, 2000);
-    //       }
-    //       if (slack != "" ) { // input validation.
-    //         $("#alert").text(alert); //not working need to work on.
-    //         two = setTimeout(function twoSeconds(){
-    //           $("#alert").empty();
-    //         }, 2000);
-    //         }
+      }
+
+      if (name != "" ) { // input validation.
+        $("#alert").text("Name cannot be blank"); //not working need to work on.
+        two = setTimeout(function twoSeconds(){
+          $("#alert").empty();
+        }, 2000);
+        }
+        if (email != "" ) { // input validation.
+          $("#alert").text("Email cannot be blank"); //not working need to work on.
+          two = setTimeout(function twoSeconds(){
+            $("#alert").empty();
+          }, 2000);
+          }
+          if (slack != "" ) { // input validation.
+            $("#alert").text("Slack id cannot be blank"); //not working need to work on.
+            two = setTimeout(function twoSeconds(){
+              $("#alert").empty();
+            }, 2000);
+            }
 
     function validateEmail(email) {
       var re = /^(?:[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])$/;
@@ -68,13 +70,13 @@ $(document).ready(function () {
     console.log(email);
 
     if (validateEmail(email) != true) {
-      $("#alert").text("Not valid info!"); //this works (mostly) if you enter a valid email and submit it works, if you then change to an invalid, it works, 
+      $("#alert").text("Not valid email!"); //this works (mostly) if you enter a valid email and submit it works, if you then change to an invalid, it works, 
       //now if you fix the email it still reports invalid. if you start with an invalid and fix it still shows invalid so the div usn't refreshing.
     }
     else {
       $("#alert").text("Valid info :D"); //ok this fixes the above issue
     }
-    
+
 
     database.ref().push({
 
