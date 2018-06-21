@@ -26,11 +26,11 @@
 <body>
 
     <div class="grid-container">
-
+        <!-- Page header -->
         <div class="callout large primary">
             <div class="row column text-center">
                 <h1>Global Events Tracker</h1>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.</p>
+                <p class="lead">(description of what the app does here maybe) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.</p>
             </div>
         </div>
 
@@ -48,15 +48,15 @@
                         <form role="form">
                             <div class="form-group row">
                                 <label for="name-input">Name:</label>
-                                <input class="form-control" id="name-input" type="text">
+                                <input class="form-control" id="name-input" type="text" placeholder="Name">
                             </div>
                             <div class="form-group row">
                                 <label for="email-input">Email:</label>
-                                <input class="form-control" id="email-input" type="email">
+                                <input class="form-control" id="email-input" type="email" placeholder="Email">
                             </div>
                             <div class="form-group row">
                                 <label for="slack-input">Slack ID:</label>
-                                <input class="form-control" id="slack-input" type="text">
+                                <input class="form-control" id="slack-input" type="text" placeholder="Slack ID">
                             </div>
                             <p>
                                 <button class="button expanded primary" id="search-data" type="submit">Submit</button>
@@ -66,13 +66,12 @@
                 </div>
             </div>
 
-
             <div class="large-6 medium-6 cell">
                 <div class="card">
                     <div class="card-section">
                         <div class="form-group row">
                             <label for="search-input">Search Input:</label>
-                            <input class="form-control" id="search-input" type="text">
+                            <input class="form-control" id="search-input" type="text" placeholder="Search">
                         </div>
                     </div>
                 </div>
@@ -82,21 +81,16 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
 
         <div class="grid-x grid-padding-x">
             <div class="large-6 medium-6 cell">
-                <!-- Recent searches -->
+                <!-- Recent searches table -->
                 <table class="table table-bordered hover unstriped">
-                    <!-- thead-light does not appear to be working -->
                     <thead>
                         <tr>
                             <th>Trending Searches</th>
                             <th></th>                    
-
-
                         </tr>
                     </thead>
                     <tbody id="trending">
