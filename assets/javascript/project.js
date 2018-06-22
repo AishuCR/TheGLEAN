@@ -10,8 +10,6 @@ $(document).ready(function() {
     messagingSenderId: "12069449119"
   };
   firebase.initializeApp(config);
-<<<<<<< HEAD
-=======
 
   var database = firebase.database();
 
@@ -102,7 +100,6 @@ $(document).ready(function() {
   
   
 
->>>>>>> 04a86bc4afb76a0bfd58814c74e0cab7731c72e9
 
   var database = firebase.database();
 
