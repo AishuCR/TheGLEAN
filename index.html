@@ -104,30 +104,25 @@ Then pull simplified list to results div -->
         <!-- <div><a href="http://www.cssdrive.com" target="internal">CSS Drive</a></div> -->
         <!-- <iframe src="http://www.bing.com" style="width: 90%; height: 300px" name="internal"></iframe> -->
 
-<script>
-// window.twttr = (function(d, s, id) {
-//     var js, fjs = d.getElementsByTagName(s)[0],
-//       t = window.twttr || {};
-//     if (d.getElementById(id)) return t;
-//     js = d.createElement(s);
-//     js.id = id;
-//     js.src = "https://platform.twitter.com/widgets.js";
-//     fjs.parentNode.insertBefore(js, fjs);
+<a href="https://twitter.com/messages/compose?recipient_id=&ref_src=twsrc%5Etfw" class="twitter-dm-button" data-screen-name="slack-input" data-show-count="false">Message Yourself the Results</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<script>window.twttr = (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+      t = window.twttr || {};
+    if (d.getElementById(id)) return t;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js, fjs);
   
-//     t._e = [];
-//     t.ready = function(f) {
-//       t._e.push(f);
-//     };
-
-// var twitterdm = "email-input"
-
-//     <a href="https://twitter.com/messages/compose?recipient_id=3805104374&text=Hello%20world"
-//   class="twitter-dm-button" data-screen-name="@davekubo">
-// Message @davekubo</a>
-</script>  
-
+    t._e = [];
+    t.ready = function(f) {
+      t._e.push(f);
+    };
+  
     return t;
   }(document, "script", "twitter-wjs"));</script>
+
         <div class="row">
             <div class="col-6">
                 <!-- Current Employees Table -->
