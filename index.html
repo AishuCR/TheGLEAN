@@ -87,16 +87,19 @@
             </div>
         </div>
 
-        <div class="grid-x grid-padding-x">
-            <div class="large-6 medium-6 cell">
-                <!-- Recent searches table -->
-                <table class="table table-bordered hover unstriped">
-                    <thead>
-                        <tr>
-                            <th>Trending Searches</th>
-                            <th></th>                    
-                        </tr>
-                    </thead>
+        <div id="wrapper">
+                <div class="row">
+                    <div class="col">
+                        <!-- Current Employees Table -->
+                        <table class="table table-bordered table-hover">
+                          <!-- thead-light does not appear to be working -->
+       -                  <thead class="thead-light">
+       -                    <tr>
+       -                      <th scope="col">Trending Searches</th>
+       -                      
+       -                      
+       -                    </tr>
+       -                  </thead>
                     <tbody id="trending">
                         <!-- Rows will go here. Eventually. -->
                     </tbody>
@@ -106,6 +109,7 @@
         </div>
 
     </div>
+</div> <!--end of wrapper-->
 
     <iframe src="https://api.gdeltproject.org/api/v2/doc/doc?query=%22Trump%20President%22 sourcelang:english sourcecountry:US&mode=Artlist&TIMELINESMOOTH&TIMESPAN=1d=5&Sort=DateDesc&Maxrecords=10&FORMAT=html" scrolling="yes" width=85% height=500 frameborder="5" class="respviz"></iframe>
 
