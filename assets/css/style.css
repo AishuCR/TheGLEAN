@@ -2,3 +2,14 @@
     background-color: dodgerblue;
     color:white;
 }
+
+#wrapper {
+    height: 200px;
+    width: 50%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+td {
+    height: 5px;
+}
