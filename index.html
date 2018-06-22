@@ -1,1 +1,275 @@
+<!DOCTYPE html>
+<head>
+<<<<<<< HEAD
 
+<html lang="en-us">
+
+
+    <meta charset="UTF-8">
+    <title>Sign-Up Today!</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+    
+    
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+
+    <script src="assets/javascript/project.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <br>
+
+        <!-- Jumbotron -->
+        <div class="jumbotron" id="title">
+            <h1 class="text-center">Global Events Tracker</h1>
+        </div>
+
+        <div class="row">
+
+            <!-- Sign-Up details-->
+            <div class="col-lg-6">
+                <div class="card card-default">
+                    <div class="card-heading">
+                        <h3 class="card-title">Sign-Up Details</h3>
+                    </div>
+                    <div class="card-body">
+
+                        <!-- Sign-up Form (note the various input "types")-->
+                        <form role="form">
+                            <div class="form-group row">
+                                <label for="name-input">Name:</label>
+                                <input class="form-control" id="name-input" type="text">
+                            </div>
+                            <div class="form-group row">
+                                <label for="email-input">Email:</label>
+                                <input class="form-control" id="email-input" type="email">
+                            </div>
+                            <div class="form-group row">
+                                <label for="slack-input">Slack ID:</label>
+                                <input class="form-control" id="slack-input" type="text">
+                            </div>
+
+                            <button  class="btn btn-primary" id="search-data" type="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-6" "col-sm-12" style="margin-top: 10px;">
+                <div class="card card-default">
+                    <div class="card-body">
+                        <div class="form-group row">
+                            <label for="search-input">Search Input:</label>
+                            <input class="form-control" id="search-input" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                        <div class="col-12">
+                            <h3 id = "alert"></h3>
+                          </div>
+                    </div>
+            </div>
+
+
+        </div>
+<!-- Need to Limit to 10 and fix frame
+Then pull simplified list to results div -->
+
+        <iframe src="https://api.gdeltproject.org/api/v2/doc/doc?query=%22Trump%20President%22 sourcelang:english sourcecountry:US&mode=Artlist&TIMELINESMOOTH&TIMESPAN=1d=5&Sort=DateDesc&Maxrecords=10&FORMAT=html" scrolling="yes" width=85% height=500 frameborder="5" class="respviz"></iframe>
+
+        <!-- <iframe id="myFrame" src="https://api.gdeltproject.org/api/v2/geo/geo?query=trump&mode=country"></iframe> -->
+
+        <!-- <script type="text/javascript">
+            // $("#myFrame").attr('src', 'http://www.google.com/');
+            $("#myFrame").attr('src', "https://api.gdeltproject.org/api/v2/doc/doc?query=%22Trump%20President%22 sourcelang:english sourcecountry:US&mode=Artlist&TIMELINESMOOTH&TIMESPAN=1d=5&Sort=DateDesc&Maxrecords=10&FORMAT=html");
+        </script> -->
+
+
+        <!-- JSON FORMAT -->
+        <!-- https://api.gdeltproject.org/api/v2/doc/doc?query=%22Trump%20President%22%20sourcelang:english%20sourcecountry:US&mode=ArtList&TimelineVolInfo&TIMELINESMOOTH&TIMESPAN=1440=5&FORMAT=JSON -->
+    
+        <!-- <div><a href="http://www.cssdrive.com" target="internal">CSS Drive</a></div> -->
+        <!-- <iframe src="http://www.bing.com" style="width: 90%; height: 300px" name="internal"></iframe> -->
+
+<a href="https://twitter.com/messages/compose?recipient_id=&ref_src=twsrc%5Etfw" class="twitter-dm-button" data-screen-name="slack-input" data-show-count="false">Message Yourself the Results</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<script>window.twttr = (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+      t = window.twttr || {};
+    if (d.getElementById(id)) return t;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  
+    t._e = [];
+    t.ready = function(f) {
+      t._e.push(f);
+    };
+  
+    return t;
+  }(document, "script", "twitter-wjs"));</script>
+
+        <div class="row">
+            <div class="col-6">
+                <!-- Current Employees Table -->
+                <table class="table table-bordered table-hover">
+                  <!-- thead-light does not appear to be working -->
+                  <thead class="thead-light">
+                    <tr>
+                      <th scope="col">Trending Searches</th>
+                      
+                      
+                    </tr>
+                  </thead>
+                  <tbody id="trending">
+                    <!-- Rows will go here. Eventually. -->
+                  </tbody>
+                </table>
+                <!-- End of Table -->
+              </div>
+        </div>
+
+    </div>
+
+    
+
+
+</body>
+
+</html>
+=======
+>>>>>>> 7b677d3fc91865ae364bba9bb87c85493c815d94
+
+<html lang="en-us">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Sign-Up Today!</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+
+    <script src="assets/javascript/project.js"></script>
+
+    
+
+        <!-- <iframe id="myFrame" src="https://api.gdeltproject.org/api/v2/geo/geo?query=trump&mode=country"></iframe> -->
+
+</head>
+
+<body>
+
+    <div class="grid-container">
+        <!-- Page header -->
+        <div class="callout large primary">
+            <div class="row column text-center">
+                <h1>Global Events Tracker</h1>
+                <p class="lead">(description of what the app does here maybe) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.</p>
+            </div>
+        </div>
+
+        <div class="grid-x grid-padding-x">
+
+            <!-- Sign-Up details-->
+            <div class="large-6 medium-6 cell">
+                <div class="card">
+                    <div class="card-divider">
+                        <h3>Sign-Up Details</h3>
+                    </div>
+                    <div class="card-section">
+
+                        <!-- Sign-up Form (note the various input "types")-->
+                        <form role="form">
+                            <div class="form-group row">
+                                <label for="name-input">Name:</label>
+                                <input class="form-control" id="name-input" type="text" placeholder="Name">
+                            </div>
+                            <div class="form-group row">
+                                <label for="email-input">Email:</label>
+                                <input class="form-control" id="email-input" type="email" placeholder="Email">
+                            </div>
+                            <div class="form-group row">
+                                <label for="slack-input">Slack ID:</label>
+                                <input class="form-control" id="slack-input" type="text" placeholder="Slack ID">
+                            </div>
+                            <p>
+                                <button class="button expanded primary" id="search-data" type="submit">Submit</button>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="large-6 medium-6 cell">
+                <div class="card">
+                    <div class="card-section">
+                        <div class="form-group row">
+                            <label for="search-input">Search Input:</label>
+                            <input class="form-control" id="search-input" type="text" placeholder="Search">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h3 id="alert"></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="wrapper">
+                <div class="row">
+                    <div class="col">
+                        <!-- Current Employees Table -->
+                        <table class="table table-bordered table-hover">
+                          <!-- thead-light does not appear to be working -->
+       -                  <thead class="thead-light">
+       -                    <tr>
+       -                      <th scope="col">Trending Searches</th>
+       -                      
+       -                      
+       -                    </tr>
+       -                  </thead>
+                    <tbody id="trending">
+                        <!-- Rows will go here. Eventually. -->
+                    </tbody>
+                </table>
+                <!-- End of Table -->
+            </div>
+        </div>
+
+    </div>
+</div> <!--end of wrapper-->
+
+    <iframe src="https://api.gdeltproject.org/api/v2/doc/doc?query=%22Trump%20President%22 sourcelang:english sourcecountry:US&mode=Artlist&TIMELINESMOOTH&TIMESPAN=1d=5&Sort=DateDesc&Maxrecords=10&FORMAT=html" scrolling="yes" width=85% height=500 frameborder="5" class="respviz"></iframe>
+
+
+
+</body>
+
+</html>

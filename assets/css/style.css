@@ -1,0 +1,18 @@
+#title{
+    background-color: dodgerblue;
+    color:white;
+<<<<<<< HEAD
+=======
+}
+
+#wrapper {
+    height: 200px;
+    width: 50%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+td {
+    height: 5px;
+>>>>>>> 7b677d3fc91865ae364bba9bb87c85493c815d94
+}
