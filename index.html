@@ -7,8 +7,8 @@
     <meta charset="UTF-8">
     <title>Sign-Up Today!</title>
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- Foundation(new Technology) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.css">
     <!--custom style sheet-->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
@@ -16,35 +16,31 @@
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery.js"></script>
-
-    
-    
+    <!--firebase link-->
     <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
-
+    <!--javascript link-->
     <script src="assets/javascript/project.js"></script>
 
 </head>
 
 <body>
-    <div class="container">
-
-
-        <br>
-
-        <!-- Jumbotron -->
-        <div class="jumbotron" id="title">
-            <h1 class="text-center">Global Events Tracker</h1>
+    <div class="grid-container">
+        <!-- Page header -->
+        <div class="callout large primary">
+            <div class="row column text-center">
+                <h1>Global Events Tracker</h1>
+        </div>
         </div>
 
-        <div class="row">
+        <div class="grid-x grid-padding-x">
 
             <!-- Sign-Up details-->
-            <div class="col-lg-6">
-                <div class="card card-default">
-                    <div class="card-heading">
+            <div class="large-6 medium-6 cell">
+                <div class="card">
+                    <div class="card-divider">
                         <h3 class="card-title">Sign-Up Details</h3>
                     </div>
-                    <div class="card-body">
+                    <div class="card-section">
 
                         <!-- Sign-up Form (note the various input "types")-->
                         <form role="form">
@@ -60,63 +56,28 @@
                                 <label for="slack-input">Slack ID:</label>
                                 <input class="form-control" id="slack-input" type="text">
                             </div>
-
-                            <div class="form-group row">
-                                <label for="search-input">Search Input:</label>
-                                <input class="form-control" id="search-input" type="text">
-                            </div>
-                            <button class="btn btn-primary" id="search-data" type="submit">Submit</button>
+                            <button class="button expanded primary" id="search-data" type="submit">Submit</button>
                         </form>
                     </div>
                 </div>
             </div>
-            <div class="col-6">
-                <table class="table table-bordered table-hover">
-                    <!-- thead-light does not appear to be working -->
-                    <thead class="thead-light text-center">
-                        <tr>
-                            <th scope="col">Trending Searches</th>
-
-                        </tr>
-                    </thead>
-
-                    <tbody class="col-6" id="search-data">
-                        <!-- Rows will go here. Eventually. -->
-                    </tbody>
-                </table>
-                <!-- End of Table -->
-
-
-            <div class="col-lg-6" "col-sm-12" style="margin-top: 10px;">
-                <div class="card card-default">
-                    <div class="card-body">
+            <div class="large-6 medium-6 cell">
+                <div class="card">
+                    <div class="card-section">
                         <div class="form-group row">
                             <label for="search-input">Search Input:</label>
-                            <input class="form-control" id="search-input" type="text">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                        <div class="col-12">
-                            <h3 id = "alert"></h3>
-                          </div>
-                    </div>
+                            <input class="form-control" id="search-input" type="text" placeholder="Search">
             </div>
         </div>
-
-
         </div>
-
-        <div class="row">
-            <div class="col-6">
-                <!-- Current Employees Table -->
-                <table class="table table-bordered table-hover">
-                  <!-- thead-light does not appear to be working -->
-                  <thead class="thead-light">
+                <div class="grid-x grid-padding-x">
+                    <table class="large-6 medium-6 cell">
+                        <!-- Recent searches table -->
+                        <table class="table table-bordered hover unstriped">
+                            <thead>
                     <tr>
                       <th scope="col">Trending Searches</th>
-                      
-                      
+                                    <th></th>
                     </tr>
                   </thead>
                   <tbody id="trending">
@@ -124,15 +85,11 @@
                   </tbody>
                 </table>
                 <!-- End of Table -->
+                    </table>
+                </div>
               </div>
         </div>
-
     </div>
-
-    
-
-
 </body>
 
 </html>
-
