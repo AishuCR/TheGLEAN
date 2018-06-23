@@ -68,7 +68,7 @@ $(document).ready(function () {
 
     validateEmail(email);
     console.log(email);
-
+    
     if (validateEmail(email) != true) {
       $("#alert").text("Not valid email!"); //this works (mostly) if you enter a valid email and submit it works, if you then change to an invalid, it works, 
       //now if you fix the email it still reports invalid. if you start with an invalid and fix it still shows invalid so the div usn't refreshing.
@@ -76,15 +76,15 @@ $(document).ready(function () {
     else {
       $("#alert").text("Valid info :D"); //ok this fixes the above issue
     }
-
+    
     function displayInfo() {
       $("#results").empty();
       var limit = 10;
-
+      
       searchTerm = $("#search-input").val().trim();
       console.log(searchTerm + "log");
       var queryURL = "https://api.gdeltproject.org/api/v2/doc/doc?query=" + searchTerm + " sourcelang:english sourcecountry:US&mode=Artlist&TIMELINESMOOTH&TIMESPAN=1d=5&Sort=DateDesc&Maxrecords=" + limit + "&FORMAT=html";
-
+      
       console.log(queryURL);
       $.ajax({
         url: queryURL,
@@ -92,33 +92,33 @@ $(document).ready(function () {
       }).then(function (response) {
         console.log(response);
         $("#results").append(response);
-
+        
       });
     }
-
+    
     displayInfo();
-
+    
     database.ref().push({
-
+      
       searchTerm: searchTerm,
       slack: slack,
       name: name,
       email: email,
       // can create additional fields as needed.
-
+      
     });
-
+    
     // console.log(searchTerm);
     // console.log(slack);
     // console.log(name);
     // console.log(email);
     $("tr").last().empty();
-
+    
   });
-
+  
   database.ref().limitToLast(5).on("child_added", function (snapshot) {
     // limit to last limits the display to 5 results.
-
+    
     var newRow = $("<tr>");
 
     // Add database data to table data elements
@@ -129,16 +129,39 @@ $(document).ready(function () {
 
     // Add table data elements with database info to the table row
     newRow.prepend(newSearch, newSlack);
-
+    
     // Add the filled table row to the table
     $("#trending").prepend(newRow); // again not sure what the id will be but a placeholder.
 
+    //Change the timeline slug
+    twttr.widgets.createTimeline(
+      {
+        sourceType: "list",
+        ownerScreenName: "TwitterDev",
+        slug: "Bears"
+      },
+      document.getElementById("container")
+    );
+    
+     function displayreddit() {
+       $("#results-reddit").empty();
+       var limit = 10;
+   
+       searchTerm = $("#search-input").val().trim();
+       console.log(searchTerm + "log");
+       var queryURL = "http://www.reddit.com/search.json?q=" + searchTerm + "&FORMAT=html";
+   
+       console.log(queryURL);
+       $.ajax({
+         url: queryURL,
+         method: "GET"
+       }).then(function (response) {
+         console.log(response);
+         $("#results-reddit").append(response);
+       });
 
+  };
+});
+
+  
   });
-
-
-
-
-
-
-}); // end of document.ready
