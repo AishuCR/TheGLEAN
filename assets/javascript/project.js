@@ -130,7 +130,7 @@ function displayInfo() {
     console.log(searchTerm + "log");
     var key = "&api-key=11a88ca9be994975831753129dc04cf5";
 
-    var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + searchTerm + key;
+    var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + searchTerm + "=&sort=newest" + key;
     
 
     $.ajax({
@@ -140,15 +140,27 @@ function displayInfo() {
        console.log(response);
        var results = response.response.docs;
 
+       for(var i = 0; i < results.length; i++){
+        var articles = results[i];
 
-       for (var i = 0; i < results.length; i++) {
-          var topicDiv = $("<div>");
+//Appends the the Articles in a list.
+        $("#tweets").append('<li class="article">'+
+                '<a href="'+articles.web_url+'">'+articles.headline.main+'</a>'+
+                '<p>' + articles.snippet + '</p>'+
+            '</li>');
+
+      };
+
+
+    //    for (var i = 0; i < results.length; i++) {
+        
+    //     var topicImage = $("<img>");
+    //     topicImage.attr("src", results[i].multimedia[1].url);
+
+        
           
-          var p = $("<p>").text(results[i].web_url);
-          
-          topicDiv.append(p);
-          $("#tweets").prepend(topicDiv);
-       }
+    //       $("#tweets").prepend(topicImage);
+    //    }
 
 
       
