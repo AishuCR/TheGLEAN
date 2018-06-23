@@ -13,3 +13,7 @@
 td {
     height: 5px;
 }
+
+#right {
+    float: right;
+}

@@ -21,9 +21,9 @@
 
     <script src="assets/javascript/project.js"></script>
 
+    
 
-
-    <!-- <iframe id="myFrame" src="https://api.gdeltproject.org/api/v2/geo/geo?query=trump&mode=country"></iframe> -->
+        <!-- <iframe id="myFrame" src="https://api.gdeltproject.org/api/v2/geo/geo?query=trump&mode=country"></iframe> -->
 
 </head>
 
@@ -34,8 +34,7 @@
         <div class="callout large primary">
             <div class="row column text-center">
                 <h1>Global Events Tracker</h1>
-                <p class="lead">(description of what the app does here maybe) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-                    in dui mauris.</p>
+                <p class="lead">(description of what the app does here maybe) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.</p>
             </div>
         </div>
 
@@ -45,51 +44,79 @@
             <div class="large-6 medium-6 cell">
                 <div class="card">
                     <div class="card-divider">
-                        <h3>Sign-Up Details</h3>
+                        <h3>Events Search</h3>
                     </div>
                     <div class="card-section">
 
                         <!-- Sign-up Form (note the various input "types")-->
                         <form role="form">
-                            <div class="form-group row">
-                                <label for="name-input">Name:</label>
-                                <input class="form-control" id="name-input" type="text" placeholder="Name">
-                            </div>
-                            <div class="form-group row">
-                                <label for="email-input">Email:</label>
-                                <input class="form-control" id="email-input" type="email" placeholder="Email">
-                            </div>
-                            <div class="form-group row">
-                                <label for="slack-input">Slack ID:</label>
-                                <input class="form-control" id="slack-input" type="text" placeholder="Slack ID">
-                            </div>
+                                <div class="form-group row">
+                                        <label for="search-input">Search Input:</label>
+                                        <input class="form-control" id="search-input" type="text" placeholder="Search">
+                                    </div>
                             <p>
                                 <button class="button expanded primary" id="search-data" type="submit">Submit</button>
                             </p>
                         </form>
                     </div>
                 </div>
+                
             </div>
 
-            <div class="large-6 medium-6 cell">
-                <div class="card">
-                    <div class="card-section">
-                        <div class="form-group row">
-                            <label for="search-input">Search Input:</label>
-                            <input class="form-control" id="search-input" type="text" placeholder="Search">
+            
+        </div>
+    </div>
+
+    <div class="grid-container">
+        <div id="wrapper">
+                <div class="row">
+                    <div class="col-6">
+                        <!-- Current Employees Table -->
+                        <table class="table table-bordered table-hover">
+                          <!-- thead-light does not appear to be working -->
+                   <thead class="thead-light">
+                          <tr>
+                         <th scope="col">Trending Searches</th>
+                           
+                         </tr>
+                       </thead>
+                     
+                            
+                                <tbody id="trending">
+                            <!-- Rows will go here. Eventually. -->
+                                </tbody>
+                           
+                        </table>
+                        <!-- End of Table -->
+                      </div>
+                </div>
+        
+            </div>
+        </div> <!--end of wrapper-->
+    </div> <!-- end of container-->
+
+
+    <div class="grid-container" id="right">
+            
+                    <div class="row">
+                        <div class="col-6">
+                                <div id="results">
+                                </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <h3 id="alert"></h3>
-                    </div>
-                </div>
-                <div id="twitter" class="large-6 medium-6 cell">
-                    Twitter results
+         
+    </div> <!-- end of container-->
+
+    <div class="grid-container" id="twit">
+            
+            <div class="row">
+                <div class="col-6">
+                        <div id="tweets">
+                        </div>
                 </div>
             </div>
-        </div>
+ 
+</div> <!-- end of container-->
 
         <div id="wrapper">
             <div class="row">
@@ -112,15 +139,10 @@
                 </div>
             </div>
 
-        </div>
-        <div id="results">
 
-        </div>
-        <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    </div>
-    <!--end of wrapper-->
+
+
+    <
 
     <!-- <iframe src="https://api.gdeltproject.org/api/v2/doc/doc?query=%22Trump%20President%22 sourcelang:english sourcecountry:US&mode=Artlist&TIMELINESMOOTH&TIMESPAN=1d=5&Sort=DateDesc&Maxrecords=10&FORMAT=html" scrolling="yes" width=85% height=500 frameborder="5" class="respviz"></iframe> -->
 
