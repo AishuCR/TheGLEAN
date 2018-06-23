@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
-<html>
-    
+<html lang="en-us">
+
 <head>
 
     <meta charset="UTF-8">
@@ -22,6 +22,8 @@
     <script src="assets/javascript/project.js"></script>
 
 
+
+    <!-- <iframe id="myFrame" src="https://api.gdeltproject.org/api/v2/geo/geo?query=trump&mode=country"></iframe> -->
 
 </head>
 
@@ -81,12 +83,10 @@
                 <div class="row">
                     <div class="col-12">
                         <h3 id="alert"></h3>
-                        <!-- TWITTER API -- get working from this JSON source -->
-                        <!-- GET https://api.twitter.com/1.1/trends/place.json?id=23424977 -->
-                        <a class="twitter-timeline" data-width=100% data-height="900" data-theme="dark" href="https://twitter.com/TwitterDev/timelines/539487832448843776?ref_src=twsrc%5Etfw">National Park Tweets</a>
-                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
                     </div>
+                </div>
+                <div id="twitter" class="large-6 medium-6 cell">
+                    Twitter results
                 </div>
             </div>
         </div>
@@ -97,14 +97,13 @@
                     <!-- Current Employees Table -->
                     <table class="table table-bordered table-hover">
                         <!-- thead-light does not appear to be working -->
-                        -
                         <thead class="thead-light">
-                            -
                             <tr>
-                                -
                                 <th scope="col">Trending Searches</th>
-                                - - - </tr>
-                            - </thead>
+
+
+                            </tr>
+                        </thead>
                         <tbody id="trending">
                             <!-- Rows will go here. Eventually. -->
                         </tbody>
@@ -114,11 +113,16 @@
             </div>
 
         </div>
+        <div id="results">
+
+        </div>
+        <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     </div>
     <!--end of wrapper-->
 
-    <iframe src="https://api.gdeltproject.org/api/v2/doc/doc?query=%22Trump%20President%22 sourcelang:english sourcecountry:US&mode=Artlist&TIMELINESMOOTH&TIMESPAN=1d=5&Sort=DateDesc&Maxrecords=10&FORMAT=html"
-        scrolling="yes" width=85% height=500 frameborder="5" class="respviz"></iframe>
+    <!-- <iframe src="https://api.gdeltproject.org/api/v2/doc/doc?query=%22Trump%20President%22 sourcelang:english sourcecountry:US&mode=Artlist&TIMELINESMOOTH&TIMESPAN=1d=5&Sort=DateDesc&Maxrecords=10&FORMAT=html" scrolling="yes" width=85% height=500 frameborder="5" class="respviz"></iframe> -->
 
 
 
