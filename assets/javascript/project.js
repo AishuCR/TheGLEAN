@@ -144,48 +144,17 @@ function displayInfo() {
         var articles = results[i];
 
 //Appends the the Articles in a list.
-        $("#tweets").append('<li class="article">'+
+        $("#tweets").append(
                 '<a href="'+articles.web_url+'">'+articles.headline.main+'</a>'+
-                '<p>' + articles.snippet + '</p>'+
-            '</li>');
+                '<p>' + articles.snippet +  '</p>'
+            );
+        if (articles.multimedia.length > 1) {
+        $('#tweets').append('<img src="'+ 'https://static01.nyt.com/' + articles.multimedia[2].url+'">');
+        }
 
       };
 
-
-    //    for (var i = 0; i < results.length; i++) {
-        
-    //     var topicImage = $("<img>");
-    //     topicImage.attr("src", results[i].multimedia[1].url);
-
-        
-          
-    //       $("#tweets").prepend(topicImage);
-    //    }
-
-
-      
     })
-
-
-
-
-
-
-    // var queryURL = "https://api.twitter.com/1.1/search/tweets.json?q=" + searchTerm;
-
-    // console.log(queryURL);
-    // $.ajax({
-    //   url: queryURL,
-      
-       
-      
-    //   method: "GET"
-    // }).then(function (response) {
-    //   console.log(response);
-      
-
-    // });
-
 }
 
 
