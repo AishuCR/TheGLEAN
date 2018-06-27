@@ -23,7 +23,7 @@
 
 
 
-    <!-- <iframe id="myFrame" src="https://api.gdeltproject.org/api/v2/geo/geo?query=trump&mode=country"></iframe> -->
+    <!--<iframe id="myFrame" src="https://api.gdeltproject.org/api/v2/geo/geo?query=trump&mode=country"></iframe>-->
 
 </head>
 
@@ -51,11 +51,13 @@
                         <form role="form">
                             <div class="form-group row">
                                 <label for="name-input">Name:</label>
-                                <input class="form-control" id="name-input" type="text" placeholder="Name">
+                                <input class="form-control" id="name-input" type="text" placeholder="Name" required pattern="[a-zA-Z]+">
+                                <small class="error">Name is required and must be a string.</small>
                             </div>
                             <div class="form-group row">
                                 <label for="email-input">Email:</label>
-                                <input class="form-control" id="email-input" type="email" placeholder="Email">
+                                <input class="form-control" id="email-input" type="email" placeholder="Email" required>
+                                <small class="error">An email address is required.</small>
                             </div>
                             <div class="form-group row">
                                 <label for="slack-input">Slack ID:</label>
@@ -90,7 +92,7 @@
                         <table class="table table-bordered table-hover">
                             <!-- thead-light does not appear to be working -->
                             <thead class="large-6 medium-6 cell">
-                                <th>Trending Searches</th>
+                                <th>Trending Searches for you:</th>
                             </thead>
                             <tbody id="trending">
                                 <!-- Rows will go here. Eventually. -->
@@ -101,15 +103,22 @@
                 </div>
 
             </div>
-            <div id="results">
-
-            </div>
         </div>
 
-        <!--end of wrapper-->
+    </div>
+    </div>
+    <div id="results" class="grid-container">
 
-        <!--<iframe src="https://api.gdeltproject.org/api/v2/doc/doc?query=%22Trump%20President%22 sourcelang:english sourcecountry:US&mode=Artlist&TIMELINESMOOTH&TIMESPAN=1d=5&Sort=DateDesc&Maxrecords=10&FORMAT=html"
-        scrolling=yes width=85% height=500 frameborder=5 class=respviz></iframe>-->
+
+    </div>
+    <div id="tweets" class="grid-container">
+
+    </div>
+    <iframe src="http://search.twitter.com/search.json?q=trump&rpp=10&lang=en&callback=?"></iframe>
+    
+    <!--end of wrapper-->
+
+
 
 
 
