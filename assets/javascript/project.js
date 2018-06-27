@@ -145,11 +145,11 @@ function displayInfo() {
 
 //Appends the the Articles in a list.
         $("#tweets").append(
-                '<a href="'+articles.web_url+'">'+articles.headline.main+'</a>'+
+                '<a class="nyt" href="'+articles.web_url+'">'+articles.headline.main+'</a>'+
                 '<p>' + articles.snippet +  '</p>'
             );
         if (articles.multimedia.length > 1) {
-        $('#tweets').append('<img src="'+ 'https://static01.nyt.com/' + articles.multimedia[2].url+'">');
+        $('#tweets').append('<img src="'+ 'https://static01.nyt.com/' + articles.multimedia[2].url+'">' + "<br>");
         }
 
       };

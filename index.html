@@ -5,7 +5,7 @@
 <head>
 
     <meta charset="UTF-8">
-    <title>Sign-Up Today!</title>
+    <title>Global Events Tracker</title>
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
@@ -21,9 +21,9 @@
 
     <script src="assets/javascript/project.js"></script>
 
-    
 
-        <!-- <iframe id="myFrame" src="https://api.gdeltproject.org/api/v2/geo/geo?query=trump&mode=country"></iframe> -->
+
+    <!-- <iframe id="myFrame" src="https://api.gdeltproject.org/api/v2/geo/geo?query=trump&mode=country"></iframe> -->
 
 </head>
 
@@ -34,7 +34,6 @@
         <div class="callout large primary">
             <div class="row column text-center">
                 <h1>Global Events Tracker</h1>
-                <p class="lead">(description of what the app does here maybe) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.</p>
             </div>
         </div>
 
@@ -50,82 +49,80 @@
 
                         <!-- Sign-up Form (note the various input "types")-->
                         <form role="form">
-                                <div class="form-group row">
-                                        <label for="search-input">Search Input:</label>
-                                        <input class="form-control" id="search-input" type="text" placeholder="Search">
-                                    </div>
+                            <div class="form-group row">
+                                <label for="search-input">Search Input:</label>
+                                <input class="form-control" id="search-input" type="text" placeholder="Search">
+                            </div>
                             <p>
                                 <button class="button expanded primary" id="search-data" type="submit">Submit</button>
                             </p>
                         </form>
                     </div>
                 </div>
-                
+
             </div>
 
-            
-        </div>
-    </div>
 
-    <div class="grid-container">
-        <div id="wrapper">
-                <div class="row">
-                    <div class="col-6">
-                        <!-- Current Employees Table -->
+
+
+
+            <div class="large-6 medium-6 cell">
+                <div  class="card">
+                    <div class="card-divider">
+                        Trending Searches
+                    </div>
+                    <!-- Trending searches Table -->
+                    <div id="wrapper" class="card-section">
                         <table class="table table-bordered table-hover">
-                          <!-- thead-light does not appear to be working -->
-                   <thead class="thead-light">
-                          <tr>
-                         <th scope="col">Trending Searches</th>
-                           
-                         </tr>
-                       </thead>
-                     
-                            
-                                <tbody id="trending">
-                            <!-- Rows will go here. Eventually. -->
-                                </tbody>
-                           
+                            <!-- thead-light does not appear to be working -->
+                            <!-- <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">Trending Searches</th>
+                                </tr>
+                            </thead> -->
+                            <tbody id="trending">
+                                <!-- Rows will go here. Eventually. -->
+                            </tbody>
                         </table>
                         <!-- End of Table -->
-                      </div>
+                    </div>
                 </div>
-        
             </div>
-        </div> <!--end of wrapper-->
-    </div> <!-- end of container-->
+            <!--end of wrapper-->
+        </div>
+        <!-- end of top container-->
 
+        <div class="grid-x grid-padding-x">
+            <div class="large-6 medium-6 cell" id="right" style="width: 50%;">
 
-    <div class="grid-container" id="right">
-            
-                    <div class="row">
-                        <div class="col-6">
-                                <div id="results">
-                                </div>
+                <div class="">
+                    <div class="col-6">
+                        <div id="results">
                         </div>
                     </div>
-         
-    </div> <!-- end of container-->
+                </div>
 
-    <div class="grid-container" id="twit">
-            
-            <div class="row">
-                <div class="col-6">
+            </div>
+            <!-- end of container-->
+
+            <div class="large-6 medium-6 cell" id="twit" style="width: 50%;">
+
+                <div class="">
+                    <div class="col-6">
                         <div id="tweets">
                         </div>
+                    </div>
                 </div>
+
             </div>
- 
-</div> <!-- end of container-->
+        <!-- end of container-->
+        </div>
 
 
-
-
-
-    <
-
-    
-
+    </div>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
 
 </body>
