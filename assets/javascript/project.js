@@ -145,7 +145,7 @@ function displayInfo() {
 
 //Appends the the Articles in a list.
         $("#tweets").append(
-                '<a class="nyt" href="'+articles.web_url+'">'+articles.headline.main+'</a>'+
+                '<a href="'+articles.web_url+'">'+articles.headline.main+'</a>'+
                 '<p>' + articles.snippet +  '</p>'
             );
         if (articles.multimedia.length > 1) {
