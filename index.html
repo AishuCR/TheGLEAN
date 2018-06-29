@@ -5,7 +5,7 @@
 <head>
 
     <meta charset="UTF-8">
-    <title>Sign-Up Today!</title>
+    <title>Global Events Tracker</title>
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
@@ -20,10 +20,6 @@
     <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
 
     <script src="assets/javascript/project.js"></script>
-
-
-
-    <!--<iframe id="myFrame" src="https://api.gdeltproject.org/api/v2/geo/geo?query=trump&mode=country"></iframe>-->
 
 </head>
 
@@ -43,25 +39,15 @@
             <div class="large-6 medium-6 cell">
                 <div class="card">
                     <div class="card-divider">
-                        <h3>Sign-Up Details</h3>
+                        <h3>Events Search</h3>
                     </div>
                     <div class="card-section">
 
                         <!-- Sign-up Form (note the various input "types")-->
                         <form role="form">
                             <div class="form-group row">
-                                <label for="name-input">Name:</label>
-                                <input class="form-control" id="name-input" type="text" placeholder="Name" required pattern="[a-zA-Z]+">
-                                <small class="error">Name is required and must be a string.</small>
-                            </div>
-                            <div class="form-group row">
-                                <label for="email-input">Email:</label>
-                                <input class="form-control" id="email-input" type="email" placeholder="Email" required>
-                                <small class="error">An email address is required.</small>
-                            </div>
-                            <div class="form-group row">
-                                <label for="slack-input">Slack ID:</label>
-                                <input class="form-control" id="slack-input" type="text" placeholder="Slack ID">
+                                <label for="search-input">Search Input:</label>
+                                <input class="form-control" id="search-input" type="text" placeholder="Search">
                             </div>
                             <p>
                                 <button class="button expanded primary" id="search-data" type="submit">Submit</button>
@@ -69,31 +55,23 @@
                         </form>
                     </div>
                 </div>
+
             </div>
+
             <div class="large-6 medium-6 cell">
-                <div class="card">
-                    <div class="card-section">
-                        <div class="form-group row">
-                            <label for="search-input">Search Input:</label>
-                            <input class="form-control" id="search-input" type="text" placeholder="Search">
-                        </div>
+                <div  class="card">
+                    <div class="card-divider">
+                        Trending Searches
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <h3 id="alert"></h3>
-                    </div>
-                </div>
-
-
-                <div id="wrapper">
-                    <div class="large-6 medium-6 cell">
-                        <!-- Current Employees Table -->
+                    <!-- Trending searches Table -->
+                    <div id="wrapper" class="card-section">
                         <table class="table table-bordered table-hover">
                             <!-- thead-light does not appear to be working -->
-                            <thead class="large-6 medium-6 cell">
-                                <th>Trending Searches for you:</th>
-                            </thead>
+                            <!-- <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">Trending Searches</th>
+                                </tr>
+                            </thead> -->
                             <tbody id="trending">
                                 <!-- Rows will go here. Eventually. -->
                             </tbody>
@@ -101,27 +79,43 @@
                         <!-- End of Table -->
                     </div>
                 </div>
+            </div>
+            <!--end of wrapper-->
+        </div>
+        <!-- end of top container-->
+
+        <div class="grid-x grid-padding-x">
+            <div class="large-6 medium-6 cell" id="right" style="width: 50%;">
+
+                <div class="">
+                    <div class="col-6">
+                        <div id="results" style="background-color: white; color:red;">
+                        </div>
+                    </div>
+                </div>
 
             </div>
+            <!-- end of container-->
+
+            <div class="large-6 medium-6 cell" id="twit" style="width: 50%;">
+
+                <div class="">
+                    <div class="col-6">
+                        <div id="tweets">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        <!-- end of container-->
         </div>
 
-    </div>
-    </div>
-    <div id="results" class="grid-container">
-
 
     </div>
-    <div id="tweets" class="grid-container">
-
-    </div>
-    
-    
-    <!--end of wrapper-->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
 
-
-
-
-</body>
 
 </html>

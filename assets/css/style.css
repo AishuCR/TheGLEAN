@@ -4,7 +4,7 @@
 }
 
 #wrapper {
-    height: 400px;
+    height: 200px;
     width: 100%;
     overflow-y: auto;
     overflow-x: hidden;
@@ -12,4 +12,21 @@
 
 td {
     height: 5px;
+}
+
+#right {
+    float: right;
+}
+
+a {
+    border: solid;
+    border-color: black;
+    border: 1px;
+}
+body{
+    background-color: black;
+}
+#right{
+    background-color: black;
+    color: aliceblue;
 }
