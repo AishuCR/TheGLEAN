@@ -11,7 +11,6 @@ It uses firebase to store the search terms and displays the last 5 searches as t
   <li>CSS</li>
   <li>Javascript</li>
   <li>Firebase</li>
-  <ul>
-
+<ul>
 <h3>Link:</h3>
 https://aishucr.github.io/TheWicketNailer-s/
