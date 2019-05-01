@@ -13,4 +13,4 @@ It uses firebase to store the search terms and displays the last 5 searches as t
   <li>Firebase</li>
 <ul>
 <h3>Link:</h3>
-https://aishucr.github.io/TheWicketNailer-s/
+https://aishucr.github.io/TheGLEAN/
